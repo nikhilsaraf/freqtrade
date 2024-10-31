@@ -22,7 +22,9 @@ FROM ${sourceimage}:${sourcetag}
 
 # Install dependencies
 COPY requirements-nikhil.txt /freqtrade/
+RUN pip install -r requirements-nikhil.txt --user --no-cache-dir
 
 #RUN pip install "freqtrade[freqai]" --no-cache-dir
 
-RUN pip install -r requirements-nikhil.txt --user --no-cache-dir
+COPY requirements-archimedes.txt /freqtrade/
+RUN pip install -r requirements-archimedes.txt --user --no-cache-dir
