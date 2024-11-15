@@ -45,3 +45,5 @@ torchvision
 Cython
 plotly
 pyarrow
+
+ddtrace
